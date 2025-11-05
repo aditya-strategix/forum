@@ -11,12 +11,7 @@ const PostCard = ({ post }) => {
             {post.isAnswered && (
               <CheckCircle className="h-5 w-5 text-green-500" />
             )}
-            <Link
-              to={`/post/${post._id}`}
-              className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors"
-            >
-              {post.title}
-            </Link>
+           
           </div>
           
           <p className="text-gray-600 mb-3 line-clamp-2">

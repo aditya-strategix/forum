@@ -4,6 +4,7 @@ import { useSocket } from '../contexts/SocketContext';
 import PostCard from '../components/PostCard';
 import SearchBar from '../components/SearchBar';
 import { Filter, Loader, RefreshCw } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -129,7 +130,9 @@ const Home = () => {
           </div>
         ) : (
           posts.map(post => (
-            <PostCard key={post._id} post={post} />
+            <Link to={`/post/${post._id}`} key={post._id} className="block">
+              <PostCard post={post} />
+            </Link>
           ))
         )}
       </div>

@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Discussion Forum Microservice Backend",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  
   "dependencies": {
     "compression": "^1.8.1",
     "cors": "^2.8.5",
